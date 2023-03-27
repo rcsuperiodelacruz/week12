@@ -135,6 +135,7 @@ buttonContainer.addEventListener('mouseover', bgChange)
 
 function bgChange(event){
     console.log('buttons clicked', event.target)
-    event.target.classlist.add('greenBG')
+    event.target.classList.add('greenBG')
 
 }
+
