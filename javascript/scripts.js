@@ -42,7 +42,7 @@
 // alert(`the area of a circle with radius ${radius} is ${area}`);
 
 
-let shoppingList = ['bread','cheese','pepper']
+let shoppingList = ['bread','cheese','pepper', 'green']
 let listItem = document.createElement('li');
 
 function populateList(shoppingList){
@@ -69,4 +69,26 @@ squareList()
 
 function updateImage(){
     const image = document.querySelector('#shoppingCart')
+    image.setAttribute(
+        'src',
+        'https://cdn-icons-png.flaticon.com/512/263/263142.png'
+    );
+    image.setAttribute('alt', 'shopping cart')
+    image.setAttribute('width', 50)
+    image.setAttribute('height', 50)
+
 }
+
+updateImage()
+
+function changeListGreen(){
+    const ulElement = document.querySelectorAll('.shopping li');
+    console.log(ulElement)
+    for(let item of ulElement){
+        if(item.textContent.includes('green')){
+            item.classList.add('colorGreen')
+        }
+    }
+}   
+
+changeListGreen();
