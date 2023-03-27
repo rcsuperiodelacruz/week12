@@ -71,7 +71,7 @@ function updateImage(){
     const image = document.querySelector('#shoppingCart')
     image.setAttribute(
         'src',
-        'https://cdn-icons-png.flaticon.com/512/263/263142.png'
+        'images/shoppingCart.png'
     );
     image.setAttribute('alt', 'shopping cart')
     image.setAttribute('width', 50)
@@ -99,17 +99,17 @@ function alertUser(){
     // buttonRef.removeEventListener('click',alertUser)
 }
 
-buttonRef.addEventListener('click', alertUser)
+buttonRef.addEventListener('click', alertUser, {once:true})
 buttonRef.addEventListener('click',changeText)
 buttonRef.addEventListener('click',pinkBackground)
 
 function changeText(){
     const buttonRef = document.querySelector('button');
     if (buttonRef.textContent.includes('me')){
-        buttonRef.innerHTML = 'clicked'
+        buttonRef.textContent = 'clicked'
     }
     else{
-        buttonRef.innerHTML = 'click me'
+        buttonRef.textContent = 'click me'
     }
 
 }
