@@ -4,3 +4,15 @@
 .circleList {
     list-style-type: circle;
 }
+
+.colorGreen{
+    color: green;
+}
+
+.pinkBackground{
+    background-color: pi;
+}
+
+.greenBG{
+    background-color: green;
+}

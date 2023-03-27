@@ -42,7 +42,7 @@
 // alert(`the area of a circle with radius ${radius} is ${area}`);
 
 
-let shoppingList = ['bread','cheese','pepper']
+let shoppingList = ['bread','cheese','pepper', 'green']
 let listItem = document.createElement('li');
 
 function populateList(shoppingList){
@@ -67,6 +67,74 @@ function squareList(){
 
 squareList()
 
-function updateImage(){
+// function updateImage(event){
+//     console.log(event)
+//     const image = document.querySelector('#shoppingCart')
+//     image.setAttribute(
+//         'src',
+//         'images/shoppingCart.png'
+//     );
+//     image.setAttribute('alt', 'shopping cart')
+//     image.setAttribute('width', 50)
+//     image.setAttribute('height', 50)
+
+// }
+
+// updateImage()
+
+function changeListGreen(){
+    const ulElement = document.querySelectorAll('.shopping li');
+    console.log(ulElement)
+    for(let item of ulElement){
+        if(item.textContent.includes('green')){
+            item.classList.add('colorGreen')
+        }
+    }
+}   
+
+changeListGreen();
+
+const buttonRef = document.querySelector('button');
+function alertUser(){
+    // alert('you clicked')
+    // buttonRef.removeEventListener('click',alertUser)
+    console.log(event)
     const image = document.querySelector('#shoppingCart')
+    image.setAttribute(
+        'src',
+        'images/shoppingCart.png'
+    );
+    image.setAttribute('alt', 'shopping cart')
+    image.setAttribute('width', 50)
+    image.setAttribute('height', 50)
+}
+
+buttonRef.addEventListener('click', alertUser, {once:true})
+buttonRef.addEventListener('click',changeText)
+buttonRef.addEventListener('click',pinkBackground)
+
+function changeText(){
+    const buttonRef = document.querySelector('button');
+    if (buttonRef.textContent.includes('me')){
+        buttonRef.textContent = 'clicked'
+    }
+    else{
+        buttonRef.textContent = 'click me'
+    }
+
+}
+
+function pinkBackground(){
+    const ulElement = document.querySelector('body')
+    ulElement.classList.add('pinkBackground')}
+
+
+const buttonContainer = document.querySelector('.button-container')
+console.log(buttonContainer)
+buttonContainer.addEventListener('mouseover', bgChange)
+
+function bgChange(event){
+    console.log('buttons clicked', event.target)
+    event.target.classlist.add('greenBG')
+
 }
