@@ -96,6 +96,24 @@ changeListGreen();
 const buttonRef = document.querySelector('button');
 function alertUser(){
     alert('you clicked')
+    // buttonRef.removeEventListener('click',alertUser)
 }
 
 buttonRef.addEventListener('click', alertUser)
+buttonRef.addEventListener('click',changeText)
+buttonRef.addEventListener('click',pinkBackground)
+
+function changeText(){
+    const buttonRef = document.querySelector('button');
+    if (buttonRef.textContent.includes('me')){
+        buttonRef.innerHTML = 'clicked'
+    }
+    else{
+        buttonRef.innerHTML = 'click me'
+    }
+
+}
+
+function pinkBackground(){
+    const ulElement = document.querySelector('body')
+    ulElement.classList.add('pinkBackground')}
